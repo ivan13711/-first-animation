@@ -1,0 +1,204 @@
+body {
+	background-image: url(rsvgdbm.png);
+	animation: stars 10s linear infinite;
+}
+
+@keyframes stars {
+	from {
+		background-position: 100% -1000px, 0 0;
+	}
+	to {
+		background-position: 100% 1000px, 0 0;
+	}
+}
+
+.moon img {
+	max-width: 90%;
+}
+
+.moon {
+	background-image: url(moon.png);
+	background-size: cover;
+	border-radius: 50%;
+	position: absolute;
+	top: calc(50vh - 10vw);
+	left: calc(50vw - 10vw);
+	transition: transform, background-image;
+	transition-duration: 4s;
+	transition-delay: 7s;
+	width: 20vw;
+	height: 20vw;
+}
+
+.ship_1 img,
+.ship_2 img,
+.ship_3 img,
+.ship_4 img,
+.ship_5 img,
+.ship_6 img,
+.ship_7 img,
+.ship_8 img {
+	max-width: 20%;
+}
+
+.ship_1,
+.ship_2,
+.ship_3,
+.ship_4,
+.ship_5,
+.ship_6,
+.ship_7,
+.ship_8 {
+	background-image: url(7ovKJVk.png);
+	background-size: cover;
+	width: 5vw;
+	height: 5vw;
+	position: absolute;
+	top: calc(50vh - 7vw);
+	transform: translate(52vw);
+	transition-property: transform;
+	transition-duration: 3s;
+	pointer-events: none;
+	transition-delay: 0.5s;
+}
+
+.ship_1 {
+	transition-delay: 0.2s;
+}
+
+.ship_2 {
+	transition-delay: 0.3s;
+}
+
+.ship_3 {
+	transition-delay: 0.4s;
+}
+
+.ship_4 {
+	transition-delay: 0.5s;
+}
+
+.ship_5 {
+	transition-delay: 0.6s;
+}
+
+.ship_6 {
+	transition-delay: 0.7s;
+}
+
+.ship_7 {
+	transition-delay: 0.8s;
+}
+
+.ship_8 {
+	transition-delay: 0.9s;
+}
+
+.laser {
+	width: 4px;
+	height: 0px;
+	background: red;
+	transform-origin: top;
+	margin-left: auto;
+	margin-right: auto;
+	transform: rotate(180deg);
+}
+
+@keyframes laser_1 {
+	0% {
+		height: 0px;
+		transform: translate(0px, 0px);
+	}
+	50% {
+		height: 50px;
+		transform: translate(0, -150px);
+	}
+	100% {
+		height: 0px;
+		transform: translate(0, -200px);
+	}
+}
+
+@keyframes laser_4 {
+	0% {
+		height: 0px;
+		transform: translate(0px, 0px);
+	}
+	50% {
+		height: 50px;
+		transform: translate(0, -330px);
+	}
+	100% {
+		height: 0px;
+		transform: translate(0, -660px);
+	}
+}
+
+.moon:hover {
+	transform: rotate(1080deg);
+	background-image: url(630.jpg);
+}
+
+.moon:hover~.ship_1 {
+	transform: translate( 47vw, -34vh) rotate(180deg);
+}
+
+.moon:hover~.ship_1 .laser {
+	animation: laser_1;
+	animation-duration: 1s;
+	animation-delay: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: 4;
+}
+
+.moon:hover~.ship_2 {
+	transform: translate( 1vw, -34vh) rotate(135deg);
+}
+
+.moon:hover~.ship_3 {
+	transform: translate( 93vw, -34vh) rotate(-135.5deg);
+}
+
+.moon:hover~.ship_4 {
+	transform: translate( 1vw, 8vh) rotate(90deg);
+}
+
+.moon:hover~.ship_4 .laser {
+	animation: laser_4;
+	animation-duration: 1s;
+	animation-delay: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: 4;
+}
+
+.moon:hover~.ship_5 {
+	transform: translate( 93vw, 8vh) rotate(-90deg);
+}
+
+.moon:hover~.ship_5 .laser {
+	animation: laser_4;
+	animation-duration: 1s;
+	animation-delay: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: 4;
+}
+
+.moon:hover~.ship_6 {
+	transform: translate( 1vw, 52vh) rotate(45deg);
+}
+
+.moon:hover~.ship_7 {
+	transform: translate( 93vw, 52vh) rotate(-45deg);
+}
+
+.moon:hover~.ship_8 {
+	transform: translate( 47vw, 52vh);
+}
+
+.moon:hover~.ship_8 .laser {
+	animation: laser_1;
+	animation-duration: 1s;
+	animation-delay: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: 4;
+}
