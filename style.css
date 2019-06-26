@@ -23,9 +23,9 @@ body {
 	position: absolute;
 	top: calc(50vh - 10vw);
 	left: calc(50vw - 10vw);
-	transition: transform, background-image;
-	transition-duration: 4s;
-	transition-delay: 7s;
+	transition: all  easey-in-out;
+	transition-duration: 2s;
+
 	width: 20vw;
 	height: 20vw;
 }
@@ -54,10 +54,11 @@ body {
 	width: 5vw;
 	height: 5vw;
 	position: absolute;
-	top: calc(50vh - 7vw);
-	transform: translate(52vw);
-	transition-property: transform;
-	transition-duration: 3s;
+	top: calc(50vh - 2vw);
+	left: calc(50vw - 2vw);
+	transition: all easey-in-out;
+	transition-duration: 4s;
+		transition-delay: 2s;
 	pointer-events: none;
 	transition-delay: 0.5s;
 }
@@ -135,12 +136,14 @@ body {
 }
 
 .moon:hover {
-	transform: rotate(1080deg);
+
+	transform:  rotate(1080deg);
 	background-image: url(630.jpg);
+
 }
 
 .moon:hover~.ship_1 {
-	transform: translate( 47vw, -34vh) rotate(180deg);
+	transform: translate( 0vw, -46vh) rotate(180deg);
 }
 
 .moon:hover~.ship_1 .laser {
@@ -152,15 +155,15 @@ body {
 }
 
 .moon:hover~.ship_2 {
-	transform: translate( 1vw, -34vh) rotate(135deg);
+	transform: translate( -47vw, -46vh) rotate(135deg);
 }
 
 .moon:hover~.ship_3 {
-	transform: translate( 93vw, -34vh) rotate(-135.5deg);
+	transform: translate( 46vw, -46vh) rotate(-135.5deg);
 }
 
 .moon:hover~.ship_4 {
-	transform: translate( 1vw, 8vh) rotate(90deg);
+	transform: translate( -47vw, 0) rotate(90deg);
 }
 
 .moon:hover~.ship_4 .laser {
@@ -172,7 +175,7 @@ body {
 }
 
 .moon:hover~.ship_5 {
-	transform: translate( 93vw, 8vh) rotate(-90deg);
+	transform: translate( 46vw, 0) rotate(-90deg);
 }
 
 .moon:hover~.ship_5 .laser {
@@ -184,15 +187,15 @@ body {
 }
 
 .moon:hover~.ship_6 {
-	transform: translate( 1vw, 52vh) rotate(45deg);
+	transform: translate(-47vw, 42vh) rotate(45deg);
 }
 
 .moon:hover~.ship_7 {
-	transform: translate( 93vw, 52vh) rotate(-45deg);
+	transform: translate( 46vw, 42vh) rotate(-45deg);
 }
 
 .moon:hover~.ship_8 {
-	transform: translate( 47vw, 52vh);
+	transform: translate( 0vw, 42vh);
 }
 
 .moon:hover~.ship_8 .laser {
